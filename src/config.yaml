@@ -1,0 +1,16 @@
+data_ingestion:
+  raw_data_path: "data/raw"
+
+data_preprocessing:
+  raw_data_path: "data/raw/dataset.csv"
+  processed_data_path: "data/processed/cleaned_dataset.csv"
+
+data_splitting:
+  processed_data_path: "data/processed/cleaned_dataset.csv"
+  train_data_path: "data/train/train.csv"
+  test_data_path: "data/test/test.csv"
+
+model_training:
+  train_data_path: "data/train/train.csv"
+  test_data_path: "data/test/test.csv"
+  model_path: "models/xgb_regressor.pkl"

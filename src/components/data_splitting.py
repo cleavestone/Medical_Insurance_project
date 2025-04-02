@@ -3,15 +3,18 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from src.utils.logger import logger
 from src.utils.exception import CustomException
+from src.utils.common import load_yaml,create_folder
+
+data=load_yaml()
 
 # Define paths
-PROCESSED_DATA_PATH = "data/processed/cleaned_dataset.csv"
-TRAIN_DATA_PATH = "data/train/train.csv"
-TEST_DATA_PATH = "data/test/test.csv"
+PROCESSED_DATA_PATH=data['data_preprocessing']['processed_data_path']
+TRAIN_DATA_PATH = data['data_splitting']['train_data_path']
+TEST_DATA_PATH = data['data_splitting']['test_data_path']
 
 # Create directories
-os.makedirs("data/train", exist_ok=True)
-os.makedirs("data/test", exist_ok=True)
+create_folder("data/train")
+create_folder("data/test")
 
 def split_data():
     """Load processed data, split into train and test sets, and save."""

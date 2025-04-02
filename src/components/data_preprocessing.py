@@ -7,11 +7,12 @@ from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 from src.utils.logger import logger
 from src.utils.exception import CustomException
+from src.utils.common import load_yaml, create_folder
 
-# Define paths
-RAW_DATA_PATH = "data/raw/dataset.csv"
-PROCESSED_DATA_PATH = "data/processed/cleaned_dataset.csv"
-os.makedirs("data/processed", exist_ok=True)
+data = load_yaml()
+RAW_DATA_PATH=data['data_preprocessing']['raw_data_path']
+PROCESSED_DATA_PATH=data['data_preprocessing']['processed_data_path']
+create_folder("data/processed")
 
 def preprocess_data():
     """Load, clean, impute, encode, and scale dataset."""

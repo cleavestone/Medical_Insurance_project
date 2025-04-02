@@ -2,12 +2,16 @@ import os
 import pandas as pd
 import requests
 import sys
+import yaml
 from src.utils.logger import logger
 from src.utils.exception import CustomException
+from src.utils.common import load_yaml, create_folder
+
+data = load_yaml()
 
 # Define file paths
-DATA_DIR = "data/raw"
-os.makedirs(DATA_DIR, exist_ok=True)
+DATA_DIR = data['data_ingestion']['raw_data_path']
+create_folder(DATA_DIR)
 FILE_PATH = os.path.join(DATA_DIR, "dataset.csv")
 
 def download_data(url):

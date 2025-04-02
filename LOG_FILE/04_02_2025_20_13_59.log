@@ -1,0 +1,4 @@
+[2025-04-02 20:13:59,377] 20 src.utils.logger - INFO - Downloading data from https://raw.githubusercontent.com/haissaoui/Portfolio-Project-US-Medical-Insurance-Costs/refs/heads/main/insurance.csv
+[2025-04-02 20:13:59,946] 27 src.utils.logger - INFO - Dataset downloaded successfully at data/raw\dataset.csv
+[2025-04-02 20:13:59,948] 34 src.utils.logger - INFO - Loading dataset...
+[2025-04-02 20:13:59,985] 36 src.utils.logger - INFO - Dataset loaded successfully with shape (1338, 7)

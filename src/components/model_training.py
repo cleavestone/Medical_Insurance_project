@@ -6,12 +6,14 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from src.utils.logger import logger
 from src.utils.exception import CustomException
 import sys
+from src.utils.common import load_yaml,create_folder
 
+data=load_yaml()
 # Define paths
-TRAIN_DATA_PATH = "data/train/train.csv"
-TEST_DATA_PATH = "data/test/test.csv"
-MODEL_PATH = "models/xgb_regressor.pkl"
-os.makedirs("models", exist_ok=True)
+TRAIN_DATA_PATH = data['data_splitting']['train_data_path']
+TEST_DATA_PATH = data['data_splitting']['test_data_path']
+MODEL_PATH = data['model_training']['model_path']
+create_folder("models")
 
 def train_model():
     """Train an XGBoost model and evaluate performance."""
