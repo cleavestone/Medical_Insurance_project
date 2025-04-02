@@ -68,9 +68,9 @@ cd mlops-project
 ```
 ### **2️⃣ Set Up Virtual Environment**
 ```bash
-python -m venv venv
+virtualenv venv
 source venv/bin/activate   # (Linux/macOS)
-venv\Scripts\activate      # (Windows)
+source venv\Scripts\activate      # (Windows)
 ```
 ### **3️⃣ Install Dependencies**
 ```bash
