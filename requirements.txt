@@ -1,0 +1,33 @@
+# Core Libraries
+pandas
+numpy
+matplotlib
+seaborn
+
+# Machine Learning
+scikit-learn
+xgboost
+
+# MLOps
+zenml
+mlflow
+
+
+# Configuration Management
+pyyaml
+
+# Data Preprocessing & Pipeline Utilities
+joblib
+tqdm
+
+# API & Deployment
+streamlit
+
+# Containerization
+docker
+
+# AWS SDK (for model storage & deployment)
+boto3
+
+# Testing
+pytest
